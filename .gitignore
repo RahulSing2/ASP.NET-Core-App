@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs/ASP.NET-Core-App/DesignTimeBuild
+/.vs/ASP.NET-Core-App/v16
+/ASP.NET-Core-App/bin/Debug/net5.0
+/ASP.NET-Core-App/obj/Debug/net5.0/ref
+/ASP.NET-Core-App/obj/Debug/net5.0/staticwebassets
+/ASP.NET-Core-App/obj/Release/net5.0
+/ASP.NET-Core-App/Properties
+/ASP.NET-Core-App/wwwroot

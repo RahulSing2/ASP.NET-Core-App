@@ -1,0 +1,44 @@
+﻿using ASP.NET_Core_App.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Text.Encodings.Web;
+namespace ASP.NET_Core_App.Controllers
+{
+    public class HomeController : Controller
+    {
+        public readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Movie(int numTimes = 5)
+        {
+            ViewData["Message"] = "Hello rahul";
+            ViewData["NumTimes"] = numTimes;
+            ViewData["Message"] = "Your movie page.";
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
